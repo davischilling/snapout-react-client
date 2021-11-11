@@ -1,32 +1,62 @@
+import {
+// getContactAdapter,
+// getEventsAdapter,
+// getMediasAdapter,
+// getMembersAdapter,
+// getParagraphsAdapter,
+// getSectionsAdapter,
+  setCurrentMemberAdapter,
+  getCurrentMemberAdapter
+} from '@/main/adapters'
+import { ContactModel, EventModel, MediaModel, MemberModel, ParagraphModel, SectionModel } from '@/domain/models'
+import { makeMainPage, makeMemberPage } from '@/main/factories/presentation'
+import { MenuActiveRoute } from '@/main/proxies'
+import { appState } from '@/presentation/components'
 import React from 'react'
 import {
   BrowserRouter,
-  Switch,
-  Route
+  Switch
 } from 'react-router-dom'
-import { makeLoginPage, makeSignUpPage, makeSurveyListPage } from '@/main/factories/presentation'
-import { getCurrentAccountAdapter, setCurrentAccountAdapter } from '@/main/adapters'
-import { PrivateRoute } from '@/main/proxies'
-import { currentAccountState } from '@/presentation/components'
-
 import { RecoilRoot } from 'recoil'
+import { ScrollToTop } from '@/presentation/hooks'
 
 const Router: React.FC = () => {
   const state = {
-    setCurrentAccount: setCurrentAccountAdapter,
-    getCurrentAccount: getCurrentAccountAdapter
+    isLoading: false,
+    isMenuActive: true,
+    contact: {} as ContactModel,
+    events: [] as EventModel[],
+    medias: [] as MediaModel[],
+    members: [] as MemberModel[],
+    paragraphs: [] as ParagraphModel[],
+    sections: [] as SectionModel[],
+    currentMember: {} as MemberModel,
+    setCurrentMember: setCurrentMemberAdapter,
+    getCurrentMember: getCurrentMemberAdapter
+    // getContact: getContactAdapter,
+    // getEvents: getEventsAdapter,
+    // getMedias: getMediasAdapter,
+    // getMembers: getMembersAdapter,
+    // getParagraphs: getParagraphsAdapter,
+    // getSections: getSectionsAdapter
   }
   return (
-    <RecoilRoot initializeState={({ set }) => set(currentAccountState, state)}>
+    <RecoilRoot initializeState={({ set }) => set(appState, state)}>
       <BrowserRouter>
+        <ScrollToTop />
         <Switch>
-          <Route path="/login" exact component={makeLoginPage} />
-          <Route path="/signup" exact component={makeSignUpPage} />
-          <PrivateRoute path="/" exact component={makeSurveyListPage} />
+          <MenuActiveRoute
+            path="/"
+            exact
+            component={makeMainPage}
+          />
+          <MenuActiveRoute
+            path="/"
+            component={makeMemberPage}
+          />
         </Switch>
       </BrowserRouter>
     </RecoilRoot>
-
   )
 }
 

@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Snap-Out/ Rock indie italiano</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>4Dev - Enquetes para Programadores</title>
+    <meta name="description" content="Gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti." />
+    <meta name="author" content="Davi Schilling / Full-Stack Developer, Rome" />
+    <meta name="keywords" content="Snap-Out, Rock, indie, italiano, musician, band, musicians, blog, music, music industry" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#e21f2f">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#e21f2f">
+
+    <PreloadImage
+    src="/public/img/svg/logo-snap-out.svg?size=119x29"
+    lazy
+    />
+    <PreloadImage
+      src="/public/img/slider/musician-music-band-slide-01-small.png?size=345x477"
+      lazy
+    />
+
+    <link
+      as="style"
+      rel="stylesheet preload prefetch"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext&display=swap"
+      type="text/css"
+      crossOrigin="anonymous"
+    />
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css" defer />
+
+    <!-- CSS  Required Files -->
+    <link rel="stylesheet" href="masterslider/style/masterslider.min.css" defer><!-- Master slider main style -->
+    <link rel="stylesheet" href="masterslider/skins/default/style.min.css" defer><!-- Master slider default skin -->
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css"/><!-- Owl carousel -->
+    <link rel='stylesheet' href="css/hamburgers.css" defer> <!-- Custom hamburger menu -->
+
+    <!-- Magnific popup plugin -->
+    <link rel="stylesheet" href="css/magnific-popup.css" defer><!-- newsletter popup and popup gallery -->
+
+    <!-- CSS Default Files -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" defer>
+    <link rel="stylesheet" href="css/animate.css" defer>
+    <link rel="stylesheet" href="css/style.css" defer>
+    <link rel="stylesheet" href="css/color-red.css" defer>
+    <link rel="stylesheet" href="css/responsive.css" defer>
   </head>
-  <body>
+  <body class="dark-theme music-band">
     <main id="main"></main>
+
+    <script src="js/jquery-core.js" ></script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="js/jquery-scripts.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="masterslider/masterslider.min.js" defer></script>
+    <script src="owl-carousel/owl.carousel.min.js" defer></script>
+    <script src="js/volcanno.include.js" defer></script>
+
+    <script>
+      /* <![CDATA[ */
+      jQuery(document).ready(function ($) {
+          'use strict';
+
+          // MASTER SLIDER START
+          VolcannoInclude.masterSliderInit("masterslider-band");
+
+          // INCLUDE LATEST PORTFOLIO CAROUSEL
+          VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
+
+          // INCLUDE LATEST POSTS CAROUSEL
+          VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
+
+          // FOOTER NEWSLETTER
+          VolcannoInclude.magnificPopupInit('newsletter-popup');
+
+          // AUDIO POPUP
+          VolcannoInclude.magnificPopupInit('audio-popup');
+      });
+      /* ]]> */
+    </script>
   </body>
 </html>

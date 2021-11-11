@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.number-slide1 h1 {
+  color: #e21f2f;
+  margin-bottom: 0;
+  font-family: "TrashHand", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 120px;
+  line-height: 130px;
+  text-transform: uppercase;
+}
+
+.number-slide2 h1 {
+  color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 80px;
+}

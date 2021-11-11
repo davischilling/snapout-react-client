@@ -5,11 +5,11 @@ module.exports = {
   entry: './src/main/index.tsx',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'main-bundle-[hash].js',
+    filename: 'main-bundle-[chunkhash].js',
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', 'scss'],
+    extensions: ['.ts', '.tsx', '.js', 'scss', 'css'],
     alias: {
       '@': path.join(__dirname, 'src')
     }

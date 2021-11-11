@@ -22,6 +22,16 @@ module.exports = merge(common, {
       }, {
         loader: 'sass-loader'
       }]
+    }, {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader']
+    }, {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      type: 'asset/resource'
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      type: 'asset/resource'
     }]
   },
   devtool: 'inline-source-map',
@@ -37,7 +47,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new DefinePlugin({
-      'process.env.API_URL': JSON.stringify('http://fordevs.herokuapp.com/api')
+      'process.env.API_URL': JSON.stringify('http://localhost:3001/api')
     }),
     new HtmlWebpackPlugin({
       template: './template.dev.html'

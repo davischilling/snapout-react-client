@@ -1,18 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>4Dev - Enquetes para Programadores</title>
+    <title>Snap-Out/ Rock indie italiano</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Gruppo rock indie italiano, hanno tra i 14 ed i 18 anni, si sono conosciuti  alle elementari e da allora suonano insieme. Studiano musica da 7 anni e nonostante la loro giovanissima età posseggono tecnica e competenze musicali di veri musicisti professionisti." />
+    <meta name="author" content="Davi Schilling / Full-Stack Developer, Rome" />
+    <meta name="keywords" content="Snap-Out, Rock, indie, italiano, musician, band, musicians, blog, music, music industry" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#e21f2f" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" />
+    <!-- <link rel="manifest" crossorigin="use-credentials" href="/public/site.webmanifest" /> -->
+    <link rel="mask-icon" href="/public/safari-pinned-tab.svg" color="#e21f2f" />
+
+    <PreloadImage
+    src="/public/img/svg/logo-snap-out.svg?size=119x29"
+    lazy
+    />
+    <PreloadImage
+      src="/public/img/slider/musician-music-band-slide-01-small.png?size=345x477"
+      lazy
+    />
+
+    <link
+      as="style"
+      rel="stylesheet preload prefetch"
+      href="/public/https://fonts.googleapis.com/css?family=Poppins:400,300,500,600&amp;subset=latin,latin-ext&display=swap"
+      type="text/css"
+      crossOrigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/fonts/font-awesome/css/font-awesome.min.css" type="text/css" defer />
+
+    <link rel="stylesheet" href="/public/masterslider/style/masterslider.min.css" defer>
+    <link rel="stylesheet" href="/public/masterslider/skins/default/style.min.css" defer>
+    <link rel="stylesheet" href="/public/"/>
+    <link rel='stylesheet' href="/public/css/hamburgers.css" defer>
+    <link rel="stylesheet" href="/public/css/magnific-popup.css" defer>
+    <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css" defer>
+    <link rel="stylesheet" href="/public/css/animate.css" defer>
+    <link rel="stylesheet" href="/public/css/style.css" defer>
+    <link rel="stylesheet" href="/public/css/color-red.css" defer>
+    <link rel="stylesheet" href="/public/css/responsive.css" defer>
   </head>
-  <body>
+  <body class="dark-theme music-band">
     <main id="main"></main>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-router-dom@5.3.0/umd/react-router-dom.min.js"></script>
     <script crossorigin src="https://unpkg.com/recoil@0.0.13/umd/recoil.min.js"></script>
+
+    <script src="/public/js/jquery-core.js" ></script>
+    <script src="/public/bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="/public/js/jquery-scripts.js" defer></script>
+    <script src="/public/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="/public/masterslider/masterslider.min.js" defer></script>
+    <script src="/public/owl-carousel/owl.carousel.min.js" defer></script>
+    <script src="/public/js/volcanno.include.js" defer></script>
+    <!-- <script src="init-app.js" defer></script> -->
+    <script>
+      /* <![CDATA[ */
+      jQuery(document).ready(function ($) {
+          'use strict';
+
+          // MASTER SLIDER START
+          VolcannoInclude.masterSliderInit("masterslider-band");
+
+          // INCLUDE LATEST PORTFOLIO CAROUSEL
+          VolcannoInclude.owlCarouselInit('latest-portfolio-carousel');
+
+          // INCLUDE LATEST POSTS CAROUSEL
+          VolcannoInclude.owlCarouselInit('latest-posts-carousel-03');
+
+          // FOOTER NEWSLETTER
+          VolcannoInclude.magnificPopupInit('newsletter-popup');
+
+          // AUDIO POPUP
+          VolcannoInclude.magnificPopupInit('audio-popup');
+      });
+      /* ]]> */
+    </script>
   </body>
 </html>

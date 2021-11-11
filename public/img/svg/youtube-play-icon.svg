@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 109 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-615.051,-1727)">
+        <g id="btn">
+            <path id="Rectangle-98" d="M631.236,1728.54C631.236,1728.54 649.612,1727 668.913,1727C688.53,1727 707.535,1728.54 707.535,1728.54C716.048,1728.54 722.949,1735.44 722.949,1743.95C722.949,1743.95 723.72,1754.26 723.72,1765.95C723.72,1777.37 722.949,1787.11 722.949,1787.11C722.949,1795.62 716.048,1802.52 707.535,1802.52C707.535,1802.52 689.813,1804.06 670.855,1804.06C650.918,1804.06 631.236,1802.52 631.236,1802.52C622.723,1802.52 615.822,1795.62 615.822,1787.11C615.822,1787.11 615.051,1778.1 615.051,1767.08C615.051,1755.03 615.822,1743.95 615.822,1743.95C615.822,1735.44 622.723,1728.54 631.236,1728.54Z" style="fill:rgb(205,31,31);fill-opacity:0.901961;"/>
+            <g id="play-icon">
+                <path id="play" d="M658.21,1750.89L658.21,1780.94L687.497,1765.53L658.21,1750.89Z" style="fill:white;"/>
+                <clipPath id="_clip1">
+                    <path id="play1" d="M658.21,1750.89L658.21,1780.94L687.497,1765.53L658.21,1750.89Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <path id="inner-shadow" d="M658.21,1750.89L683.643,1768.61L688.267,1764.76L658.21,1750.89Z" style="fill:rgb(203,203,203);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

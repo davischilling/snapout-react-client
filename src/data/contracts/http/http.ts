@@ -9,6 +9,14 @@ export interface HttpClient<R = any> {
   request: (data: HttpRequest) => Promise<HttpResponse<R>>
 }
 
+export interface ResolveAllHttpClient {
+  getPromises: () => Array<Promise<HttpResponse>>
+}
+
+export interface LoadAllHttpClient<R = any> {
+  loadAll: () => Promise<R>
+}
+
 export type HttpMethod = 'post' | 'get' | 'put' | 'delete'
 
 export enum HttpStatusCode {

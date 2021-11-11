@@ -1,0 +1,27 @@
+{
+    "short_name": "Snapout",
+    "name": "Snapout Rock Band",
+    "icons": [
+        {
+            "src": "./android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./mstile-150x150.png",
+            "type": "image/png",
+            "sizes": "270x270",
+            "purpose": "maskable"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "theme_color": "#e21f2f",
+    "background_color": "#e21f2f",
+    "display": "standalone"
+}
