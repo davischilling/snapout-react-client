@@ -39,7 +39,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new DefinePlugin({
-      'process.env.API_URL': JSON.stringify('http://localhost:3001/api')
+      'process.env.API_URL': JSON.stringify('https://snapout-server-api.herokuapp.com/api')
     }),
     new HtmlWebpackPlugin({
       template: './template.prod.html'
