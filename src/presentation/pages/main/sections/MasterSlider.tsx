@@ -63,7 +63,7 @@ export const MasterSlider: React.FC = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 width: '100vw',
-                height: '100vh',
+                maxHeight: '100vh',
                 position: 'absolute',
                 opacity: '55%',
                 backgroundPosition: 'center center',
@@ -82,8 +82,8 @@ export const MasterSlider: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                minWidth: '100vw',
-                height: '100vh',
+                width: '100vw',
+                maxHeight: '100vh',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
@@ -111,8 +111,8 @@ export const MasterSlider: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                minWidth: '100vw',
-                height: '100vh',
+                width: '100vw',
+                maxHeight: '100vh',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
@@ -140,8 +140,8 @@ export const MasterSlider: React.FC = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                minWidth: '100vw',
-                height: '100vh',
+                width: '100vw',
+                maxHeight: '100vh',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
