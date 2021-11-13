@@ -32,7 +32,7 @@ const Layout: React.FC<Props> = ({ children, menuActive }: Props) => {
 
             <Footer
                 imgUrl={'/'}
-                imgPath={'/public/img/svg/logo-snap-out.svg'}
+                imgPath={`${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/svg/logo-snap-out.svg`}
                 menuActive={menuActive}
                 menuItems={[
                   {

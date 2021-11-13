@@ -40,11 +40,11 @@ export const EventSection: React.FC = () => {
                                 locationSubtitle={city}
                                 locationUrl={'#'}
                                 locationText={local}
-                                tickets={[
-                                  { name: 'Fan club', isSoldOut: true, ticketUrl: '' },
-                                  { name: 'Vip tickets', isSoldOut: true, ticketUrl: '' },
-                                  { name: 'Common Ticket', isSoldOut: false, ticketUrl: '' }
-                                ]}
+                                // tickets={[
+                                //   { name: 'Fan club', isSoldOut: true, ticketUrl: '' },
+                                //   { name: 'Vip tickets', isSoldOut: true, ticketUrl: '' },
+                                //   { name: 'Common Ticket', isSoldOut: false, ticketUrl: '' }
+                                // ]}
                             />
                         ))
                     }

@@ -63,7 +63,7 @@ export const Header: React.FC<Props> = ({ menuActive }: Props) => {
                                     <div className="col-md-12">
                                         <MainNav
                                             logoUrl={'/'}
-                                            logoImgPath={'/public/img/svg/logo-snap-out.svg'}
+                                            logoImgPath={`${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/svg/logo-snap-out.svg`}
                                             menuActive={menuActive}
                                             isMobile={isMobile}
                                         />

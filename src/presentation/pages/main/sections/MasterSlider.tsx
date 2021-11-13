@@ -58,7 +58,7 @@ export const MasterSlider: React.FC = () => {
           <div style={{ maxHeight: '100vh' }}>
             <div
               style={{
-                backgroundImage: `url(${'/public/img/slider/mobile-slider.png'})`,
+                backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/mobile-slider.png)`,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -78,7 +78,7 @@ export const MasterSlider: React.FC = () => {
             <div
               className="keen-slider__slide number-slide"
               style={{
-                backgroundImage: `url(${'/public/img/slider/musician-music-band-slide-01.webp'})`,
+                backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/musician-music-band-slide-01.webp)`,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -107,7 +107,7 @@ export const MasterSlider: React.FC = () => {
             <div
               className="keen-slider__slide number-slide"
               style={{
-                backgroundImage: `url(${'/public/img/slider/musician-music-band-slide-02.webp'})`,
+                backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/musician-music-band-slide-02.webp)`,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -136,7 +136,7 @@ export const MasterSlider: React.FC = () => {
             <div
               className="keen-slider__slide number-slide"
               style={{
-                backgroundImage: `url(${'/public/img/slider/musician-music-band-slide-03.webp'})`,
+                backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/musician-music-band-slide-03.webp)`,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
