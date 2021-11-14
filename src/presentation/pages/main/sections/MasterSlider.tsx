@@ -59,11 +59,10 @@ export const MasterSlider: React.FC = () => {
             <div
               style={{
                 backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/mobile-slider.png)`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '100vw',
+                width: 'auto',
+                maxWidth: '100vw',
                 maxHeight: '100vh',
+                height: '100vh',
                 position: 'absolute',
                 opacity: '55%',
                 backgroundPosition: 'center center',
@@ -79,11 +78,10 @@ export const MasterSlider: React.FC = () => {
               className="keen-slider__slide number-slide"
               style={{
                 backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/musician-music-band-slide-01.webp)`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '100vw',
+                width: 'auto',
+                maxWidth: '100vw',
                 maxHeight: '100vh',
+                height: '100vh',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
@@ -108,11 +106,10 @@ export const MasterSlider: React.FC = () => {
               className="keen-slider__slide number-slide"
               style={{
                 backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/musician-music-band-slide-02.webp)`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '100vw',
+                width: 'auto',
+                maxWidth: '100vw',
                 maxHeight: '100vh',
+                height: '100vh',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
@@ -137,11 +134,10 @@ export const MasterSlider: React.FC = () => {
               className="keen-slider__slide number-slide"
               style={{
                 backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/public/' : ''}img/slider/musician-music-band-slide-03.webp)`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '100vw',
+                width: 'auto',
+                maxWidth: '100vw',
                 maxHeight: '100vh',
+                height: '100vh',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat'
               }}
