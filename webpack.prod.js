@@ -5,7 +5,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
 const CopyPlugin = require('copy-webpack-plugin')
-const uglifyJsContents = require('uglify-js')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -39,6 +39,7 @@ module.exports = merge(common, {
     'react-router-dom': 'ReactRouterDOM'
   },
   plugins: [
+    new CompressionPlugin(),
     new DefinePlugin({
       'process.env.API_URL': JSON.stringify('https://snapout-server-api.herokuapp.com/api')
     }),
@@ -55,10 +56,7 @@ module.exports = merge(common, {
       patterns: [
         {
           from: 'public',
-          to: 'public',
-          transform: function (fileContent, path) {
-            return uglifyJsContents.minify(fileContent.toString()).code.toString()
-          }
+          to: 'public'
         }
       ]
     })
