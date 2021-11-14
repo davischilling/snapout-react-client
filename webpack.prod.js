@@ -5,6 +5,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const common = require('./webpack.common')
 const { merge } = require('webpack-merge')
 const CopyPlugin = require('copy-webpack-plugin')
+const uglifyJsContents = require('uglify-js')
 
 module.exports = merge(common, {
   mode: 'production',
@@ -52,7 +53,13 @@ module.exports = merge(common, {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'public', to: 'public' }
+        {
+          from: 'public',
+          to: 'public',
+          transform: function (fileContent, path) {
+            return uglifyJsContents.minify(fileContent.toString()).code.toString()
+          }
+        }
       ]
     })
   ]
