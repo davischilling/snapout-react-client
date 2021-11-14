@@ -1,12 +1,11 @@
 import { LoadStateModels } from '@/domain/usecases'
 import { ContactModel, EventModel, MediaModel, MemberModel, ParagraphModel, SectionModel } from '@/domain/models'
-import { appState, PageContent } from '@/presentation/components'
+import { appState, Loading } from '@/presentation/components'
 import {
   AboutSection,
   BandMembersSection, ContactSection, EventSection, MasterSlider, VideoGridSection
 } from './sections'
 
-import Loader from 'react-loader-spinner'
 import React, { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 
@@ -18,6 +17,9 @@ const MainPage: React.FC<Props> = ({ loadStateModels }: Props) => {
   const [state, setState] = useRecoilState(appState)
 
   useEffect(() => {
+    if (state.contact?.id !== undefined) {
+      return
+    }
     setState(old => ({ ...old, isLoading: true }))
     loadStateModels.getStateModels()
       .then(models => {
@@ -37,31 +39,13 @@ const MainPage: React.FC<Props> = ({ loadStateModels }: Props) => {
 
   return (
     <>
+      {state.isLoading && <Loading />}
       <MasterSlider />
-      {
-        !state.isLoading
-          ? (
-          <>
-            <AboutSection />
-            <BandMembersSection />
-            <EventSection />
-            <VideoGridSection />
-            <ContactSection />
-          </>
-            )
-          : (
-          <PageContent>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
-              <Loader
-                  type="Puff"
-                  color="#e21f2f"
-                  height={80}
-                  width={80}
-              />
-            </div>
-          </PageContent>
-            )
-      }
+      <AboutSection />
+      <BandMembersSection />
+      <EventSection />
+      <VideoGridSection />
+      <ContactSection />
     </>
   )
 }

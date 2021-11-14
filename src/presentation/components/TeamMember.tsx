@@ -19,7 +19,6 @@ export const TeamMember: React.FC<Props> = ({
     e.preventDefault()
     setCurrentMember(member)
     history.replace(`${memberUrlPage}${id}`)
-    // history.push(`${memberUrlPage}${id}`)
   }
 
   return (
