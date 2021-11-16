@@ -39,13 +39,18 @@ const MainPage: React.FC<Props> = ({ loadStateModels }: Props) => {
 
   return (
     <>
-      {state.isLoading && <Loading />}
       <MasterSlider />
-      <AboutSection />
-      <BandMembersSection />
-      <EventSection />
-      <VideoGridSection />
-      <ContactSection />
+      {state.isLoading
+        ? <Loading />
+        : (
+            <>
+              <AboutSection />
+              <BandMembersSection />
+              <EventSection />
+              <VideoGridSection />
+              <ContactSection />
+            </>
+          )}
     </>
   )
 }
